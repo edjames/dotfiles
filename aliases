@@ -6,6 +6,8 @@ alias reload="source ~/.bash_profile"
 
 # cd
 alias ..='cd ..'
+alias ...='cd ../..'
+alias -- -="cd -"
 
 # ls
 alias l="ls -lAh"
@@ -15,6 +17,11 @@ alias ls="ls -F"
 
 # Add an "alert" alias for long running commands.  Use like this: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # ssh
 alias ssh_ninja="ssh ed@ninja -p30000"

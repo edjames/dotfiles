@@ -1,6 +1,12 @@
 # .bashrc
 # vim:syntax=sh
 
+# Make vim the default editor
+export EDITOR="vim"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
 # Temporary utility function
 function _source_if_exists {
   local file ;
