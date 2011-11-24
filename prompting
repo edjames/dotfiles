@@ -1,0 +1,28 @@
+# .prompting
+# vim:syntax=sh
+
+[ "$PS1" ] && {
+
+  # the following properties add visual indicators about the state of the git repo
+  # in the current directory to the end of the PS1 prompt; even though these icons
+  # can be very informative, they significantly slow down the "calculation" of PS1
+  # resulting in noticeable delays when working in an interactive shell; to avoid
+  # these delays any or all of these properties can be unset in your ~/.after_sbrc
+  export GIT_PS1_SHOWDIRTYSTATE=true
+  export GIT_PS1_SHOWSTASHSTATE=true
+  export GIT_PS1_SHOWUNTRACKEDFILES=true
+  export GIT_PS1_SHOWUPSTREAM=auto
+
+  # this is the actual definition of the "dynamic" PS1 prompt
+  # for interactive shells; notice the dynamic invocation of
+  # the __git_ps1 function near the end of the PS1 prompt
+  PS1="\[\033[1;35m\]\h\[\033[1;33m\] \W\[\033[00m\] \[\e[0;33m\]\$(__git_ps1)\[\e[0;0m\] => "
+
+  # this function prints an exclamation mark at the
+  # start of the PS1 prompt if the previous command
+  # had a non-0 exit status if something went wrong
+  function __exit_status() {
+    [ $? -eq 0 ] || { danger -n " ! " ; echo -n " " ; }
+  }
+  PROMPT_COMMAND=__exit_status ;
+}

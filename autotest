@@ -1,5 +1,6 @@
 #!/bin/ruby
 # ~.autotest
+
 # require 'autotest_notification'
 # SPEAKING = false
 # DOOM_EDITION = false
@@ -9,18 +10,22 @@
 # SUCCESS_SOUND = ''
 # FAILURE_SOUND = ''
 
-# require 'redgreen'
 require 'autotest/timestamp'
 
 module Autotest::GnomeNotify
   def self.notify title, msg, img
     system "notify-send '#{title}' '#{msg}' -i #{img} -t 2000"
   end
+
   Autotest.add_hook :initialize do |autotest|
+    %w{ .git .autotest log public Gemfile Gemfile.lock LICENSE.txt Rakefile README.md VERSION }.each do |exception|
+      autotest.add_exception(exception)
+    end
     autotest.add_mapping(%r%^spec/(requests)/.*rb$%) do |filename, _|
       filename
     end
   end
+
   Autotest.add_hook :ran_command do |at|
     image_root = "~/.autotest_images"
     results = [at.results].flatten.join("\n")
@@ -37,4 +42,5 @@ module Autotest::GnomeNotify
       end
     end
   end
+
 end

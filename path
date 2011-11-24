@@ -1,0 +1,4 @@
+# .path
+# vim:syntax=sh
+
+PATH=${PATH}:${HOME}/bin;

@@ -1,0 +1,19 @@
+[user]
+  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
+  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+[color]
+     ui = auto
+[alias]
+  br = branch
+  ci = commit
+	co = checkout
+	st = status -sb
+	hist = 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+	type = cat-file -t
+	dump = cat-file -p
+	a = add .
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
