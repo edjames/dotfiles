@@ -80,6 +80,11 @@ If you want to contribute:
 * Make sure to add tests for it. This is important so I don’t break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history.
 
+Credits
+-------
+* [Peter Vandenberk (pvdb)](https://github.com/pvdb) and his (unfortunately private) sbrc project.
+* [Ryan Bates (ryanb)](https://github.com/ryanb) of RailsCasts fame, and his own (dotfiles)[https://github.com/ryanb/dotfiles] project.
+
 Copyright
 ---------
 
