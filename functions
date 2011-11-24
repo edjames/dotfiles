@@ -2,10 +2,11 @@
 # vim:syntax=sh
 
 #
-# Assuming code is at ~/Development
+# Functions on home path
 #
 
-function dev { cd ~/Development/$1; }
+function h { cd ~/$1; }
+function d { cd ~/Development/$1; }
 
 #
 # ANSI colouring functions
