@@ -1,0 +1,58 @@
+# .aliases
+# vim:syntax=sh
+
+# Reload bash aliases
+alias reload="source ~/.bash_profile"
+
+# cd
+alias ..='cd ..'
+
+# ls
+alias l="ls -lAh"
+alias la='ls -A'
+alias ll="ls -l"
+alias ls="ls -F"
+
+# Add an "alert" alias for long running commands.  Use like this: sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# ssh
+alias ssh_ninja="ssh ed@ninja -p30000"
+
+# Disk space and memory
+alias free="free -m"
+alias left="df -h"
+
+# System
+alias ps="ps -ef | grep \$1"
+alias cls="clear"
+
+
+#
+# Development-specific aliases
+#
+
+# git
+alias gg="git gui &"
+alias gk="gitk &"
+
+# rails
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+alias rst='touch tmp/restart.txt'
+alias ld="tail -f log/development.log"
+alias lt="tail -f log/test.log"
+alias lc="tail -f log/cucumber.log"
+alias lr="rm log/*.log"
+
+# Apache
+alias ame="sudo a2enmod \$1"
+alias amd="sudo a2dismod \$1"
+alias ase="sudo a2ensite \$1"
+alias asd="sudo a2dissite \$1"
+alias arc="sudo /etc/init.d/apache2 reload"
+alias arg="sudo apache2ctl graceful"
+alias ars="sudo /etc/init.d/apache2 restart"

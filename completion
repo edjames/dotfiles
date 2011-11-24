@@ -1,0 +1,12 @@
+# .completion
+# vim:syntax=sh
+
+# Source global definitions
+_source_if_exists "/etc/bash_completion" ;
+_source_if_exists "/opt/local/etc/bash_completion" ;
+
+# Set git autocompletion
+_source_if_exists "/usr/local/git/contrib/completion/git-completion.bash" ;
+
+# Set git-flow autocompletion
+_source_if_exists "${HOME}/.git-flow-completion" ;

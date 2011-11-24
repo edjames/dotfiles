@@ -1,3 +1,8 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# .bash_profile
+# vim:syntax=sh
 
-source ~/.git-flow-completion.sh
+# Get the good stuff...
+[ -f "${HOME}/.bashrc" ] && source "${HOME}/.bashrc" ;
+
+# Print a shell banner for login shells
+echo ; bash --version ; echo ;
