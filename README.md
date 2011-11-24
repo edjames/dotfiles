@@ -83,7 +83,7 @@ If you want to contribute:
 Credits
 -------
 * [Peter Vandenberk (pvdb)](https://github.com/pvdb) and his (unfortunately private) sbrc project.
-* [Ryan Bates (ryanb)](https://github.com/ryanb) of RailsCasts fame, and his own (dotfiles)[https://github.com/ryanb/dotfiles] project.
+* [Ryan Bates (ryanb)](https://github.com/ryanb) of RailsCasts fame, and his own [dotfiles](https://github.com/ryanb/dotfiles) project.
 
 Copyright
 ---------
