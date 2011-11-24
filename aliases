@@ -13,6 +13,7 @@ alias -- -="cd -"
 alias l="ls -lAh"
 alias la='ls -A'
 alias ll="ls -l"
+alias llt="ls -lrt"
 alias ls="ls -F"
 
 # Add an "alert" alias for long running commands.  Use like this: sleep 10; alert
@@ -33,6 +34,7 @@ alias left="df -h"
 # System
 alias ps="ps -ef | grep \$1"
 alias cls="clear"
+alias please="sudo"
 
 
 #
@@ -42,6 +44,8 @@ alias cls="clear"
 # git
 alias gg="git gui &"
 alias gk="gitk &"
+alias develop_branch="git co develop"
+alias master_branch="git co master"
 
 # rails
 alias b="bundle"
