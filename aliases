@@ -35,7 +35,7 @@ alias left="df -h"
 alias ps="ps -ef | grep \$1"
 alias cls="clear"
 alias please="sudo"
-
+alias open="xdg-open"
 
 #
 # Development-specific aliases
