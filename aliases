@@ -10,11 +10,11 @@ alias ...='cd ../..'
 alias -- -="cd -"
 
 # ls
-alias l="ls -lAh"
-alias la='ls -A'
-alias ll="ls -l"
-alias llt="ls -lrt"
-alias ls="ls -F"
+alias l="ls -lAh --color=auto"
+alias la='ls -A --color=auto'
+alias ll="ls -l --color=auto"
+alias llt="ls -lrt --color=auto"
+alias ls="ls -F --color=auto"
 
 # Add an "alert" alias for long running commands.  Use like this: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -31,11 +31,12 @@ alias ssh_ninja="ssh ed@ninja -p30000"
 alias free="free -m"
 alias left="df -h"
 
-# System
+# System helpers
 alias ps="ps -ef | grep \$1"
 alias cls="clear"
 alias please="sudo"
 alias open="xdg-open"
+alias xclip='xclip -selection c'
 
 #
 # Development-specific aliases
