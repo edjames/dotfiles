@@ -12,4 +12,4 @@ _source_if_exists "/usr/local/git/contrib/completion/git-completion.bash" ;
 _source_if_exists "${HOME}/.git-flow-completion" ;
 
 # Set ~/Development project completion
-complete -C ~/.dotfiles/project_completion -o default d
+complete -C ~/.dotfiles/completion_scripts/project_completion -o default d
