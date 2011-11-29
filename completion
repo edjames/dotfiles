@@ -10,3 +10,6 @@ _source_if_exists "/usr/local/git/contrib/completion/git-completion.bash" ;
 
 # Set git-flow autocompletion
 _source_if_exists "${HOME}/.git-flow-completion" ;
+
+# Set ~/Development project completion
+complete -C ~/.dotfiles/project_completion -o default d
