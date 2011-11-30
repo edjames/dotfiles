@@ -6,3 +6,6 @@
 
 # Print a shell banner for login shells
 echo ; bash --version ; echo ;
+
+# Print .dotfiles version
+[ -f "${HOME}/.dotfiles/VERSION" ] && echo "This shell has been enhanced by .dotfiles version $(cat $HOME/.dotfiles/VERSION)" && echo

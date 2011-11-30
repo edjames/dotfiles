@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+/usr/bin/env ruby <<-EORUBY
+
+class HomeCompletion
+  def initialize(command)
+    @command = command
+  end
+  
+  def matches
+    projects.select do |task|
+      task[0, typed.length] == typed
+    end
+  end
+  
+  def typed
+    @command[/\s(.+?)$/, 1] || ''
+  end
+  
+  def projects
+    %x[ls ~/].split
+  end
+end
+
+puts HomeCompletion.new(ENV["COMP_LINE"]).matches
+
+EORUBY
