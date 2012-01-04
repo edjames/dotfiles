@@ -2,7 +2,7 @@
 # vim:syntax=sh
 
 # Reload bash aliases
-alias reload="source ~/.bash_profile"
+alias reload='exec bash -l'
 
 # cd
 alias ..='cd ..'
